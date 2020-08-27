@@ -15,7 +15,7 @@ spec:
     command: 
     - cat
     tty: true
-    volumeMounts:
+    volumeMounts: 
     - mountPath: /var/run/docker.sock
       name: docker-sock
   - name: kubectl
@@ -32,10 +32,10 @@ spec:
     }
   }
   environment {
-    CREDS = credentials('bryan_docker_creds')
-    DOCKER_NAMESPACE = 'bryandollery'
+    CREDS = credentials('danya_docker_creds')
+    DOCKER_NAMESPACE = 'danya'
     SERVICE_NAME = 'department-service'
-    TOKEN=credentials('tester_token')
+    TOKEN=credentials('6440ea9d-d924-48c9-828b-4ceb059d921e')
   }
   stages {
       stage("Build") {
@@ -63,7 +63,9 @@ spec:
               container('kubectl') {
                   sh '''
                       cd $SERVICE_NAME
-                      kubectl --token=$TOKEN -n test apply -f deploy.yaml -f service.yaml
+                      kubectl --token=$TOKEN -n delta get all
+                      kubectl --token=$TOKEN -n delta apply -f deploy.yaml -f service.yaml -f ingress.yaml
+                      kubectl --token=$TOKEN -n delta get all
                   '''
               }
           }
