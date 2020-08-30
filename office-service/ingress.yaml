@@ -1,6 +1,5 @@
-apiVersion: extensions/v1
-kind: Ingress
 apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
   name: "office-ingress"
   namespace: delta
