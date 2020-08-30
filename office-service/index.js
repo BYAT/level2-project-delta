@@ -12,7 +12,7 @@ app.get("/office", (req, res) => {
         {
             "id": "1",
             "country": "Kenya",
-            "city": "Nairobi"
+            "city": "Nairobi "
         },
         {
             "id": "2",
