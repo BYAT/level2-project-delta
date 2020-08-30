@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: "office-ingress"
-  namespace: delta
+  namespace: test
 
 spec:
   rules:
