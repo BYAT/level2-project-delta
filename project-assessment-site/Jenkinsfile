@@ -35,7 +35,7 @@ spec:
     CREDS = credentials('danya_docker_creds')
     DOCKER_NAMESPACE = 'danya97'
     SERVICE_NAME = 'project-assessment-site'
-    TOKEN=credentials('f1facc46-808f-4811-83a9-bdd0c1d35480')
+    TOKEN=credentials('90461328-4d66-4ef5-bf7d-393d940b36ea')
   }
   stages {
       stage("Build") {
