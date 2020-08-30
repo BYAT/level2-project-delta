@@ -33,9 +33,9 @@ spec:
   }
   environment {
     CREDS = credentials('danya_docker_creds')
-    DOCKER_NAMESPACE = 'danya'
+    DOCKER_NAMESPACE = 'danya97'
     SERVICE_NAME = 'person-service'
-    TOKEN=credentials('89faaf1a-a053-43c8-a5c6-a46017a21927')
+    TOKEN=credentials('a72c15d3-52c5-450b-9617-0e6ffb263bc7')
   }
   stages {
       stage("Build") {
@@ -63,8 +63,7 @@ spec:
               container('kubectl') {
                   sh '''
                       cd $SERVICE_NAME
-                      kubectl --token=$TOKEN -n test apply -f deploy.yaml -f service.yaml
-		      kubectl apply -f ingress.yaml -n delta
+                      kubectl --token=$TOKEN -n test apply -f deploy.yaml -f service.yaml -f ingress.yaml
                   '''
               }
           }
