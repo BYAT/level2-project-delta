@@ -33,7 +33,7 @@ spec:
   }
   environment {
     CREDS = credentials('danya_docker_creds')
-    DOCKER_NAMESPACE = 'danya'
+    DOCKER_NAMESPACE = 'danya97'
     SERVICE_NAME = 'project-assessment-site'
     TOKEN=credentials('a72c15d3-52c5-450b-9617-0e6ffb263bc7')
   }
