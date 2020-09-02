@@ -38,7 +38,8 @@ spec:
     TOKEN=credentials('3b922df4-310b-40b0-8102-311721c247ea')
   }
   stages {
-      stage("Build") {
+      stage("Build") {  
+          when { changeset "**/office-service/**" }
           steps {
               container('ond') {
                   sh '''
@@ -49,6 +50,7 @@ spec:
           }
       }
       stage("Release") {
+          when { changeset "**/office-service/**" }
           steps {
               container('ond') {
                   sh '''
@@ -59,6 +61,7 @@ spec:
           }
       }
       stage("Deploy") {
+          when { changeset "**/office-service/**" }
           steps {
               container('kubectl') {
                   sh '''
