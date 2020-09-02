@@ -32,10 +32,10 @@ spec:
     }
   }
   environment {
-    CREDS = credentials('danya_docker_creds')
-    DOCKER_NAMESPACE = 'danya97'
+    CREDS = credentials('bashayr_docker_creds')
+    DOCKER_NAMESPACE = 'bashayr'
     SERVICE_NAME = 'office-service'
-    TOKEN=credentials('3b922df4-310b-40b0-8102-311721c247ea')
+    TOKEN=credentials('5d6289cd-7ede-49e4-8f2b-512a62560c21')
   }
   stages {
       stage("Build") {  
